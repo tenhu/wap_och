@@ -1,0 +1,67 @@
+*{
+    margin: auto;
+    padding: 0px;
+    font-size: 100%;
+    background-color: lightyellow;
+    text-align: center;
+    font-family: "Lucida Sans",serif;
+}
+
+#header{
+    background-image: url("/resources/images/banner.png");
+    vertical-align: middle;
+}
+h1{
+    font-size: 36px;
+    color: lightseagreen;
+    font-weight: bolder;
+    padding: 50px;
+
+}
+#selection{
+    max-width: 1100px;
+    margin: auto;
+    border: solid 1px silver;
+    vertical-align: middle;
+    text-align: left;
+}
+#selection input{
+    display: inline-block;
+    width: 20%;
+    padding: 20px;
+    background-color: lightseagreen ;
+
+}
+#container{
+    max-width: 1100px;
+    margin: auto;
+    column-count: 3;
+    border: solid 1px silver;
+}
+.movie{
+    display: inline;
+    text-align: center;
+    padding: 10px;
+}
+.poster{
+    position: relative;
+}
+.poster img{
+    width: 200px;
+    height: 300px;
+}
+.times{
+    clear: left;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: 280px;
+}
+.time{
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+    padding: 2px;
+    margin: 2px;
+    border: solid 1px silver;
+}
