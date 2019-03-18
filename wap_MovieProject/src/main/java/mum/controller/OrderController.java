@@ -19,7 +19,20 @@ public class OrderController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         MovieDAO movieDAO = new MovieDAO();
-        req.setAttribute("movies", movieDAO.selectMovies(4));
+        req.setAttribute("movies", movieDAO.selectMovies("1"));
+
+        RequestDispatcher view = req.getRequestDispatcher("order.jsp");
+        view.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String sid1 = req.getParameter("sid1");
+
+        System.out.println(sid1);
+        MovieDAO movieDAO = new MovieDAO();
+        req.setAttribute("movies", movieDAO.selectMovies(sid1));
 
         RequestDispatcher view = req.getRequestDispatcher("order.jsp");
         view.forward(req, resp);

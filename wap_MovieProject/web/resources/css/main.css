@@ -2,13 +2,8 @@
     margin: auto;
     padding: 0px;
     font-size: 100%;
-    background-color: lightyellow;
     text-align: center;
     font-family: "Lucida Sans",serif;
-}
-
-#header{
-    vertical-align: middle;
 }
 body{
     max-width: 90%;
@@ -16,26 +11,29 @@ body{
 }
 h1{
     font-size: 36px;
-    color: lightseagreen;
+    color: black;
     font-weight: bolder;
     padding: 50px;
 }
-
+#header{
+    background-image: url('../images/bannersmall.jpg');
+    background-repeat: repeat-x;
+}
 #selection{
     border: solid 1px silver;
     vertical-align: middle;
     text-align: left;
 }
-#selection label{
+#today, #tomorrow ,#aftertomorrow{
     display: inline-block;
     width: 20%;
     padding: 20px;
-    background-color: lightseagreen ;
-
+    background-color: lightseagreen;
 }
 #container{
     column-count: 3;
     border: solid 1px silver;
+
 }
 .movie{
     display: inline;

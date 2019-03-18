@@ -2,16 +2,16 @@
     margin: auto;
     padding: 0px;
     font-size: 100%;
-    background-color: lightyellow;
     text-align: left;
     font-family: "Lucida Sans",serif;
 }
 #header{
     vertical-align: middle;
+    background-image: url('../images/bannersmall.jpg');
 }
 h1{
     font-size: 36px;
-    color: lightseagreen;
+    color: black;
     font-weight: bolder;
     padding: 50px;
     text-align: center;
@@ -21,7 +21,7 @@ body{
     margin: auto;
 }
 #container{
-    height: 500px;
+    height: 400px;
     margin: auto;
     column-count: 2;
     border: solid 1px silver;

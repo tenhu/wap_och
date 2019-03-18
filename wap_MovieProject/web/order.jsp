@@ -43,9 +43,9 @@
         </div>
     </div>
     <div id="ticket">
-        <p><pre>Ticket count: </pre><input type="text" id="ticketcount"></p>
-        <p><pre>Ticket price:  </pre><input type="text" id="price" disabled value="${movies.ticketPrice}"></p>
-        <p><pre>Total price:    </pre><input type="text" id="totalprice" disabled></p>
+        <p><pre>Ticket count: </pre><input type="text" id="ticketcount" required ></p>
+        <p><pre>Ticket price:  </pre><input type="text" id="price" disabled value="${movies.ticketPrice}">$</p>
+        <p><pre>Total price:    </pre><input type="text" id="totalprice" disabled>$</p>
         <div id="buttons">
             <input type="button" value="Cancel" />
             <input type="button" value="Confirm" />

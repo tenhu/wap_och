@@ -18,7 +18,7 @@ public class PaymentController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        int id = 4;
+        String id = "4";
         int ticketCount = 2;
 
         MovieDAO movieDAO = new MovieDAO();

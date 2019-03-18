@@ -34,12 +34,12 @@ public class MovieDAO {
         return conn;
     }
 
-    public MovieModel selectMovies(int id) {
+    public MovieModel selectMovies(String id) {
 
         String sql = "select s.id, m.MovieName, m.Description, m.Director,  s.time , s.date ,s.available," +
                 " s.showroom , m.PictureURL, s.TicketPrice from MovieSchedule s\n" +
-                "            , Movie  m where date = '20190316'\n" +
-                "            and s.movieid = m.id and s.id = "+ id;
+                "            , Movie  m where " +
+                "             s.movieid = m.id and s.id = "+ id;
 
         MovieModel result = null;
         
@@ -61,7 +61,7 @@ public class MovieDAO {
         return result;
     }
 
-    public List<ScheduleModel> selectTodaySchedule() {
+    public List<ScheduleModel> selectTodaySchedule(String date) {
 
         String sql = "select id, PictureURL from Movie";
         List<ScheduleModel> scheduleList = new ArrayList<>();
@@ -78,7 +78,7 @@ public class MovieDAO {
                 List<TimeModel> times = new ArrayList<>();
 
                 Statement stmt1 = conn.createStatement();
-                ResultSet rs1 = stmt1.executeQuery("select id, time from MovieSchedule where date = '20190316' and movieid = " + rs.getInt("id"));
+                ResultSet rs1 = stmt1.executeQuery("select id, time from MovieSchedule where date = '"+ date+"' and movieid = " + rs.getInt("id"));
                 while (rs1.next()) {
                     times.add(new TimeModel(rs1.getInt("id"), rs1.getString("time")));
                 }

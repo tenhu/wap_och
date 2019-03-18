@@ -1,7 +1,8 @@
 $(function() {
 
     $('#ticketcount').change(function(){
-        var total = parseFloat($(this).val()) * parseFloat($('#price').val());
+
+        let total = parseFloat($(this).val()) * parseFloat($('#price').val());
         $('#totalprice').val(total);
     });
 

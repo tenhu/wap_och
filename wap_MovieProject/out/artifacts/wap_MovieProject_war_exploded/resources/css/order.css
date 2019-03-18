@@ -2,16 +2,16 @@
     margin: auto;
     padding: 0px;
     font-size: 100%;
-    background-color: lightyellow;
     text-align: left;
     font-family: "Lucida Sans",serif;
 }
 #header{
     vertical-align: middle;
+    background-image: url('../images/bannersmall.jpg');
 }
 h1{
     font-size: 36px;
-    color: lightseagreen;
+    color: black;
     font-weight: bolder;
     padding: 50px;
     text-align: center;
@@ -45,7 +45,6 @@ body{
     position: relative;
 }
 #container img{
-    float: left;
     padding: 20px;
     width: 250px;
     height: 350px;
@@ -85,4 +84,8 @@ input[type=button]{
     font-weight: bold;
     text-align: center;
     border-radius: 2px;
+}
+#up,#down {
+    width: 25px;
+    padding: 0px;
 }

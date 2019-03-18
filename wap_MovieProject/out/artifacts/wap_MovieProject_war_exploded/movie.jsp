@@ -25,11 +25,16 @@
 <body>
 <div id="header" >
     <h1>Welcome to E-Movie-Ticket</h1>
-    <div id="selection">
-        <input type="button" id="today" value=" TODAY ">
-        <input type="button" id="tomorrow" value=" TOMORROW ">
-        <input type="button" id="aftertomorrow" value=" DAY AFTER TOMORROW ">
-    </div>
+
+
+    <select id="selection">
+        <option value="20190319">2019/03/19</option>
+        <option value="20190320">2019/03/20</option>
+        <option value="20190321">2019/03/21</option>
+    </select>
+
+
+
 </div>
 <div id="container">
 
