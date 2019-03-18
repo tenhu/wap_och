@@ -10,15 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet({ "/movie", "" })
+@WebServlet({  "", "/movie" })
 public class MovieController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         MovieDAO movieDAO = new MovieDAO();
-
-        req.setAttribute("movies", movieDAO.selectAllMovies());
 
         req.setAttribute("schedules", movieDAO.selectTodaySchedule());
 

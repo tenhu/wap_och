@@ -1,0 +1,88 @@
+*{
+    margin: auto;
+    padding: 0px;
+    font-size: 100%;
+    background-color: lightyellow;
+    text-align: left;
+    font-family: "Lucida Sans",serif;
+}
+#header{
+    vertical-align: middle;
+}
+h1{
+    font-size: 36px;
+    color: lightseagreen;
+    font-weight: bolder;
+    padding: 50px;
+    text-align: center;
+}
+body{
+    max-width: 90%;
+    margin: auto;
+}
+#selection{
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    border: solid 1px silver;
+    vertical-align: middle;
+    background-color: lightseagreen;
+    font-weight: bold;
+}
+#selection input{
+    display: inline-block;
+    width: 20%;
+    padding: 20px;
+    background-color: lightseagreen ;
+    border: solid 1px silver;
+    border-radius: 2px;
+}
+#container{
+    height: 400px;
+    margin: auto;
+    column-count: 2;
+    border: solid 1px silver;
+    position: relative;
+}
+#container img{
+    float: left;
+    padding: 20px;
+    width: 250px;
+    height: 350px;
+}
+#details{
+    clear: left;
+    vertical-align: middle;
+    position: absolute;
+    top: 50px;
+    left: 280px;
+    text-align: left;
+}
+ul{
+    list-style-type: none;
+}
+#details li{
+    padding: 5px;
+}
+#ticket{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    text-align: left;
+}
+pre{
+    display: inline;
+}
+input {
+    border: 1px solid silver;
+    border-radius: 2px;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+}
+input[type=button]{
+    background-color: lightseagreen;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+}

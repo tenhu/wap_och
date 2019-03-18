@@ -13,12 +13,13 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
     <title>Movies</title>
 
     <link href="resources/css/main.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="resources/js/main.js"></script>
 </head>
 
 <body>
@@ -40,7 +41,7 @@
             <div class="times">
 
                 <c:forEach items="${schedule.times}" var="time">
-                    <span class="time" id="div1"><c:out value="${time.stime}" /> </span>
+                    <span class="time" ><input type="hidden" name="sid" id="sid" value="${time.id}"> <c:out value="${time.stime}" /> </span>
 
                 </c:forEach>
             </div>

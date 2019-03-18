@@ -1,15 +1,15 @@
-
-(function() {
-
-    alert('Hi1');
-
-    $("#header").hover(function () {
-        alert("hi2");
-
+$(function() {
+    $('.time').mouseover(
+        function(){
+            $(this).css({'background-color':'lightseagreen'});
+        }
+    );
+    $('.time').mouseout(
+        function(){
+            $(this).css({'background-color':''});
+        }
+    );
+    $('.time').click(function(){
+        window.open('order.jsp','_blank');
     });
-    // $('.time').mouseout(
-    //     function () {
-    //         $(this).css({'background-color': 'none'});
-    //     }
-    // );
-})();
+});
