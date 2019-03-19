@@ -28,13 +28,21 @@
 
 <div id="divselect"> Select your date:
     <select id="selection">
-        <option value="20190319">2019/03/19</option>
-        <option value="20190320">2019/03/20</option>
-        <option value="20190321">2019/03/21</option>
+        <option value="2019-03-19">2019/03/19</option>
+        <option value="2019-03-20">2019/03/20</option>
+        <option value="2019-03-21">2019/03/21</option>
     </select>
     <div id="login">
-        <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
-        <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
+
+
+        <c:if test="${nameSession == 'ok'}">
+            <span id="logout"><a href="logout">LOG OUT</a></span>
+        </c:if>
+        <c:if test="${nameSession != 'ok'}">
+            <span id="alogin"><a href="login">LOGIN</a> </span>
+        </c:if>
+
+
     </div>
 </div>
 

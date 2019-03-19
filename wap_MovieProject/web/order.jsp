@@ -27,10 +27,7 @@
     <h1>E-Movie-Ticket Order</h1>
     <div id="selection">
         Please insert your ticket count.
-        <div id="login">
-            <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
-            <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
-        </div>
+
     </div>
 </div>
 <div id="container">

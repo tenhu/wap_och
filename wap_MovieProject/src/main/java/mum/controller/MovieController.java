@@ -8,12 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import mum.model.DateModel;
+import mum.model.UserModel;
 
 @WebServlet({"", "/movie"})
 public class MovieController extends HttpServlet {
@@ -22,9 +24,16 @@ public class MovieController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        HttpSession session = req.getSession(false);
+
+        if (session != null && session.getAttribute("uname") != null) {
+            req.setAttribute("nameSession", "ok");
+        } else {
+            req.setAttribute("nameSession", "no");
+        }
 
 
-        req.setAttribute("schedules", movieDAO.selectTodaySchedule("20190319"));
+        req.setAttribute("schedules", movieDAO.selectTodaySchedule("2019-03-19"));
 
         RequestDispatcher view = req.getRequestDispatcher("movie.jsp");
         view.forward(req, resp);

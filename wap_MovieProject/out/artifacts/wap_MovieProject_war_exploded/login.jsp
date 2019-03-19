@@ -13,10 +13,7 @@
 <div id="header" >
     <h1>Customer login information</h1>
     <div id="selection">
-        <div id="login">
-            <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
-            <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
-        </div>
+
     </div>
 </div>
 <div id="container">
