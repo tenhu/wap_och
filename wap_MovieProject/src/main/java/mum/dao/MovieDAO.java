@@ -92,7 +92,7 @@ public class MovieDAO {
         return scheduleList;
     }
 
-    public boolean updateSeat(int id, int count) {
+    public boolean updateSeat(String id, String count) {
 
 
         String sql = "update MovieSchedule set available = (available - " + count + ")   where id =" + id ;
@@ -107,7 +107,6 @@ public class MovieDAO {
             System.out.println("Error on movies" +e.getMessage());
             return false;
         }
-
 
         return true;
     }

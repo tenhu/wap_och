@@ -20,15 +20,32 @@ h1{
     background-repeat: repeat-x;
 }
 #selection{
-    border: solid 1px silver;
     vertical-align: middle;
     text-align: left;
 }
-#today, #tomorrow ,#aftertomorrow{
-    display: inline-block;
-    width: 20%;
-    padding: 20px;
+#divselect{
+    height: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    vertical-align: middle;
     background-color: lightseagreen;
+    font-weight: bold;
+    text-align: left;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: white;
+    background-color: lightseagreen;
+    border: none;
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    text-align: left;
+    font-size: 20px;
+}
+#login{
+    float: right;
 }
 #container{
     column-count: 3;

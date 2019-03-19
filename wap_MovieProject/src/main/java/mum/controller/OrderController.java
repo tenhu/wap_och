@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -29,6 +30,9 @@ public class OrderController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String sid1 = req.getParameter("sid1");
+
+        HttpSession session=req.getSession();
+        session.setAttribute("sid",sid1);
 
         System.out.println(sid1);
         MovieDAO movieDAO = new MovieDAO();

@@ -13,25 +13,19 @@
 <div id="header" >
     <h1>Customer login information</h1>
     <div id="selection">
-        Please insert your login information
+        <div id="login">
+            <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
+            <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
+        </div>
     </div>
 </div>
 <div id="container">
         <div id="img"><img src="resources/images/enjoy.png" /></div>
-        <form id="details">
-            <fieldset >
-                <legend>Your order details</legend>
-                <p>Movie name: <span id="movieinfo">Wonder park, 17th March,12:00, showroom 1</span> </p>
-                <p>Movie name: <span id="ticketinfo">2 tickets, 20usd</span> </p>
-            </fieldset>
-            <p>User Name: </p><input type="text" id="username">
-            <p>Password:</p><input type="password" id="password">
-            <input id="submit" type="submit" value="Login" />
-            <hr>
-            <p>Your Name: </p><input type="text" id="name" />
-            <p>Phone Number: </p><input type="text" id="phone" />
-            <p>E-mail: </p><input type="email" id="email" />
-            <input id="signup" type="submit" value="Sign Up" />
+        <form id="details" action="login" method="post">
+            <p>User Name: </p><input type="text" id="username" name="uname">
+            <p>Password:</p><input type="password" id="password" name="password">
+            <p><input type="checkbox" name="remember" value="remember" />Remember me </p>
+            <p><input id="submit" type="submit" value="Login" /></p>
         </form>
 </div>
 </body>

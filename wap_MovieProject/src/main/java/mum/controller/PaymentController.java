@@ -18,35 +18,20 @@ public class PaymentController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String id = "4";
-        int ticketCount = 2;
-
-        MovieDAO movieDAO = new MovieDAO();
-        req.setAttribute("movies", movieDAO.selectMovies(id));
-
-        RequestDispatcher view = req.getRequestDispatcher("payment.jsp");
-        view.forward(req, resp);
+        resp.sendRedirect("movie");
     }
 
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int id = 4;
-        int ticketCount = 2;
-
-        String result = "";
-        MovieDAO movieDAO = new MovieDAO();
-        boolean check = movieDAO.updateSeat(id, ticketCount);
 
 
-        if(check) { result = "Success";  }
-        else {
-            result = "failed";
-        }
+        String tCount = req.getParameter("tCount");
+        String tPrice = req.getParameter("tPrice");
 
-        req.setAttribute("paymentResult", result);
+        req.setAttribute("tCount", tCount);
+        req.setAttribute("tPrice", tPrice);
 
-        System.out.println("update result: " + result);
         RequestDispatcher view = req.getRequestDispatcher("payment.jsp");
         view.forward(req, resp);
 

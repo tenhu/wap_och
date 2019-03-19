@@ -27,6 +27,10 @@
     <h1>E-Movie-Ticket Order</h1>
     <div id="selection">
         Please insert your ticket count.
+        <div id="login">
+            <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
+            <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
+        </div>
     </div>
 </div>
 <div id="container">
@@ -43,12 +47,12 @@
         </div>
     </div>
     <div id="ticket">
-        <p><pre>Ticket count: </pre><input type="text" id="ticketcount" required ></p>
+        <p><pre>Ticket count: </pre><input type="text" id="ticketcount" name="ticketcount" required ></p>
         <p><pre>Ticket price:  </pre><input type="text" id="price" disabled value="${movies.ticketPrice}">$</p>
-        <p><pre>Total price:    </pre><input type="text" id="totalprice" disabled>$</p>
+        <p><pre>Total price:    </pre><input type="text" id="totalprice" name="totalprice" disabled>$</p>
         <div id="buttons">
-            <input type="button" value="Cancel" />
-            <input type="button" value="Confirm" />
+            <input type="button" id="cancelBtn" value="Cancel" />
+            <input type="button" id="confirmBtn" value="Confirm" />
         </div>
     </div>
 </div>

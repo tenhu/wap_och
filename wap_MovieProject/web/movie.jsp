@@ -26,12 +26,17 @@
 <div id="header" >
     <h1>Welcome to E-Movie-Ticket</h1>
 
-
+<div id="divselect"> Select your date:
     <select id="selection">
         <option value="20190319">2019/03/19</option>
         <option value="20190320">2019/03/20</option>
         <option value="20190321">2019/03/21</option>
     </select>
+    <div id="login">
+        <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
+        <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
+    </div>
+</div>
 
 
 

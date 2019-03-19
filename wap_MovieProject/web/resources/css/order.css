@@ -20,6 +20,9 @@ body{
     max-width: 90%;
     margin: auto;
 }
+#login{
+    float: right;
+}
 #selection{
     height: 50px;
     padding-top: 20px;
@@ -79,8 +82,14 @@ input {
     height: 30px;
     margin: 10px;
 }
-input[type=button]{
+#confirmBtn{
     background-color: lightseagreen;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+}
+#cancelBtn{
+    background-color: red;
     font-weight: bold;
     text-align: center;
     border-radius: 2px;

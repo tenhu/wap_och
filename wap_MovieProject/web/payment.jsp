@@ -14,11 +14,20 @@
 <div id="header" >
     <h1>Payment information</h1>
     <div id="selection">
-        <span></span>
+        <div id="login">
+            <span id="alogin"><a href="login.jsp">LOGIN</a> </span>
+            <span id="logout"><a href="movie.jsp">LOG OUT</a></span>
+        </div>
     </div>
 </div>
 <div id="container">
-    <form id="details">
+    <form id="details" action="result" method="post">
+
+        <div id="paymentValue">
+            <p>  Total Count:  ${tCount}  <input type="hidden" name="tCount" value="${tCount}">  </p>
+            <p>  Total Value:  ${tPrice} $<input type="hidden" name="tPrice" value="${tPrice}"> </p>
+        </div>
+
         <div id="custinfo">
             <fieldset>
                 <legend>Customer information</legend>
@@ -34,11 +43,10 @@
                 <p>Card number: </p><input type="text" id="cardnumber" />
                 <p>Card Expiration date: </p><input type="text" id="expmonth" size="3"/> / <input type="text" id="expyear" size="4"/>
                 <p>Security code: </p><input type="text" id="securitycode" />
-                <p>Zip code: </p><input type="text" id="zipcode" />
             </fieldset>
             <div id="submit">
-                <input id="cancel" type="submit" value="Cancel" />
-                <input id="confirm" type="submit" value="Confirm" />
+                <input id="cancel" type="submit" id="payCancelBtn" value="Cancel" />
+                <input id="confirm" type="submit" id="payConmBtn" value="Confirm" />
             </div>
         </div>
     </form>
