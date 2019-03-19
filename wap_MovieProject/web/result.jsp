@@ -11,7 +11,7 @@
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript"
-            src="resources/js/result.js"></script>
+            src="resources/js/payment.js"></script>
 </head>
 <body>
 
@@ -36,8 +36,8 @@
                 <li><strong>Total amount: </strong><span id="totalamount">${tPrice}$</span> </li>
             </ul>
             <div id="buttons">
-                <input id="print" type="button" value="Print" />
-                <input id="home" type="button" value="Back to home page" />
+                <input id="print" type="button"  value="Print" />
+                <input id="home" type="button" onclick="homeBtn();" value="Back to home page" />
             </div>
         </div>
     </div>

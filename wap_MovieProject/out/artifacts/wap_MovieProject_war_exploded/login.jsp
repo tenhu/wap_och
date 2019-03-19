@@ -23,7 +23,9 @@
             <p>Password:</p><input type="password" id="password" name="password">
             <p><input type="checkbox" name="remember" value="remember" />Remember me </p>
             <p><input id="submit" type="submit" value="Login" /></p>
+            <p id="error">${errorText}</p>
         </form>
+
 </div>
 </body>
 </html>

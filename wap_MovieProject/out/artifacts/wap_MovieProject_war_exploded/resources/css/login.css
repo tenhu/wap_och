@@ -74,3 +74,11 @@ input[type="submit"]{
     text-align: center;
     border-radius: 2px;
 }
+
+input[type="checkbox"]{
+    width: 40px;
+}
+
+#error {
+    color: red;
+}

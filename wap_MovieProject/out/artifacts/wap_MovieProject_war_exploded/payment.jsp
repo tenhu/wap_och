@@ -7,9 +7,10 @@
     <title>Payment</title>
     <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="resources/js/payment.js" type="text/javascript"></script>
+
     <link href="resources/css/payment.css" type="text/css" rel="stylesheet" />
     <link rel="shortcut icon" href="resources/images/favicon.ico">
+    <script src="resources/js/payment.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="header" >
@@ -40,12 +41,12 @@
             <fieldset >
                 <legend>Account information</legend>
                 <p>Cardholder name: </p><input type="text" id="cardholder" pattern="[A-Za-z]*" title="Only letters!" required/>
-                <p>Card number: </p><input type="text" id="cardnumber" pattern="[0-9]{16}" title="must be 16 digits!" required/>
+                <p>Card number: </p><input type="text" id="cardnumber" pattern="[0-9]" title="must be 16 digits!" required/>
                 <p>Card Expiration date : </p><input id="expmonth" type="month" required/>
                 <p>Security code: </p><input type="text" id="securitycode" pattern="[0-9]{3}" title="must be 3 digits!" required/>
             </fieldset>
             <div id="submit">
-                <input id="cancel" type="button" id="payCancelBtn" value="Cancel" />
+                <input id="cancel" type="button" id="payCancelBtn" onclick="cancelBtn();" value="Cancel" />
                 <input id="confirm" type="submit" id="payConmBtn" value="Confirm" />
             </div>
         </div>

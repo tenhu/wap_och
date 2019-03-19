@@ -51,7 +51,10 @@ public class LoginController extends HttpServlet {
 
             resp.sendRedirect("movie");
         } else {
-            resp.getWriter().println("Chi hudlaa");
+
+            req.setAttribute("errorText", "Invalid username and password");
+            RequestDispatcher view = req.getRequestDispatcher("login.jsp");
+            view.forward(req, resp);
         }
 
     }
