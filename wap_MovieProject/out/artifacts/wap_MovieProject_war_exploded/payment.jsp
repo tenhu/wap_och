@@ -41,7 +41,7 @@
             <fieldset >
                 <legend>Account information</legend>
                 <p>Cardholder name: </p><input type="text" id="cardholder" pattern="[A-Za-z]*" title="Only letters!" required/>
-                <p>Card number: </p><input type="text" id="cardnumber" pattern="[0-9]" title="must be 16 digits!" required/>
+                <p>Card number: </p><input type="text" id="cardnumber" pattern="[0-9]*" title="must be 16 digits!" required/>
                 <p>Card Expiration date : </p><input id="expmonth" type="month" required/>
                 <p>Security code: </p><input type="text" id="securitycode" pattern="[0-9]{3}" title="must be 3 digits!" required/>
             </fieldset>

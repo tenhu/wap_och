@@ -19,9 +19,9 @@
 <div id="container">
         <div id="img"><img src="resources/images/enjoy.png" /></div>
         <form id="details" action="login" method="post">
-            <p>User Name: </p><input type="text" id="username" name="uname">
+            <p>User Name: </p><input type="text" id="username" name="uname" value="${userName}">
             <p>Password:</p><input type="password" id="password" name="password">
-            <p><input type="checkbox" name="remember" value="remember" />Remember me </p>
+            <p><input type="checkbox" name="remember" value="remember" ${check} />Remember me </p>
             <p><input id="submit" type="submit" value="Login" /></p>
             <p id="error">${errorText}</p>
         </form>
